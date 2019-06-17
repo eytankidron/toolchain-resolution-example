@@ -30,7 +30,7 @@ build:remote --incompatible_enable_cc_toolchain_resolution
 # by "extra_execution_platforms", "host_platform" and "platforms".
 # More about platforms: https://docs.bazel.build/versions/master/platforms.html
 build:remote --extra_toolchains=@rbe_default//config:cc-toolchain
-build:remote --extra_execution_platforms=//:plain_platform,@rbe_default//config:platform
+build:remote --extra_execution_platforms=@rbe_default//config:platform,//:plain_platform
 build:remote --host_platform=//:plain_platform
 build:remote --platforms=@rbe_default//config:platform
 
